@@ -1,0 +1,43 @@
+       body {
+        background-color: rgba(9, 9, 242, 0.33);
+       }
+       button {
+            background-color: rgba(0, 0, 0, 0.462);
+            color: black;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .animacao {
+            opacity: 0;
+            width: 30px;
+            height: 30px;
+            margin: 20px;
+            background-color: blue;
+            animation: animacao 3s linear infinite;
+        }
+
+        @keyframes animacao {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        p {
+            color: white;
+            display: none;
+            margin: 30px;
+        }
+
+        button:active~.animacao {
+            opacity: 1;
+        }
+
+        button:active~p {
+            display: block;
+        }
+    

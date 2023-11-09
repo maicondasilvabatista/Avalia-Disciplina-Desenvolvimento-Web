@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Segurança</title>
+</head>
+<body>
+
+    <style>
+
+        body {
+            background-color: rgba(0, 0, 255, 0.192);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .termo {
+    border-bottom: 1px dotted #000;
+    cursor: pointer;
+}
+
+.termo:hover::after {
+    content: attr(dica);
+    background-color: #333333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    border: 1px solid;
+    padding: 3px;
+    margin: 1px;
+}
+
+input[type="text"]:invalid, 
+input[type="password"]:invalid{
+    border: 1px solid red;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 24px
+    }
+    ul {
+        margin-left: 10px;
+}
+}
+    </style>
+
+    <ul>
+        <li><span class="termo" dica="Um firewall é um dispositivo ou software que monitora e controla o tráfego de rede para proteger uma rede ou sistema de ameaças externas.">Firewall</span></li>
+        <li><span class="termo" dica="Uma VPN é uma tecnologia que cria uma conexão criptografada entre um dispositivo e uma rede privada, aumentando a privacidade e a segurança online.">VPN</span></li>
+        <li><span class="termo" dica="Phishing é uma técnica em que os criminosos enviam mensagens falsas ou fingem ser entidades confiáveis para enganar as pessoas e obter informações pessoais ou financeiras.">Phishing</span></li>
+    </ul>
+    
+</body>
+</html>
